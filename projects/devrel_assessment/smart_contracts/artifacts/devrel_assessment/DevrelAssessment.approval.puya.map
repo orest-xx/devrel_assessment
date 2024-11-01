@@ -1,0 +1,507 @@
+{
+  "version": 3,
+  "sources": [
+    "../../devrel_assessment/contract.py"
+  ],
+  "mappings": ";;;;;;;;;AAIA;;;AAAA;;AAAA;;;AAAA;;;;;;;;;;;;AAAA;;;AAAA;;;;;;AAAA;AAAA;AAmBK;;AAAA;AAAA;AAAA;;AAAA;AAnBL;;;AAAA;;;AAmBK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAMA;;AAAA;AAAA;AAAA;;AAAA;AAzBL;;;AAAA;;;AAyBK;;;AAAA;AAAA;AAzBL;;AAAA;;;;;;;;;AAAA;AAAA;AAmBA;;;AAEoB;;;;;;;;;AAAZ;;AAAY;AACZ;AAAA;;;AACA;AAER;;;AAEQ;;;AAAA;;AAAA;;;AAAA;;AAAA;",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "smart_contracts.devrel_assessment.contract.DevrelAssessment.approval_program",
+      "params": {},
+      "block": "smart_contracts.devrel_assessment.contract.DevrelAssessment.approval_program",
+      "stack_in": [],
+      "op": "intcblock 1 0"
+    },
+    "5": {
+      "callsub": "smart_contracts.devrel_assessment.contract.DevrelAssessment.__puya_arc4_router__",
+      "op": "callsub __puya_arc4_router__",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "8": {
+      "op": "return",
+      "stack_out": []
+    },
+    "9": {
+      "subroutine": "smart_contracts.devrel_assessment.contract.DevrelAssessment.__puya_arc4_router__",
+      "params": {},
+      "block": "__puya_arc4_router__",
+      "stack_in": [],
+      "op": "proto 0 1"
+    },
+    "12": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "14": {
+      "op": "bz __puya_arc4_router___bare_routing@6",
+      "stack_out": []
+    },
+    "17": {
+      "op": "pushbytess 0x02bece11 0xeaf17e39 // method \"hello(string)string\", method \"box_put(string)void\""
+    },
+    "29": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(box_put(string)void)",
+        "Method(hello(string)string)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(hello(string)string)",
+        "Method(box_put(string)void)",
+        "tmp%2#0"
+      ]
+    },
+    "32": {
+      "op": "match __puya_arc4_router___hello_route@2 __puya_arc4_router___box_put_route@3",
+      "stack_out": []
+    },
+    "38": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "39": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "40": {
+      "block": "__puya_arc4_router___hello_route@2",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "42": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "43": {
+      "op": "assert // OnCompletion is NoOp",
+      "stack_out": []
+    },
+    "44": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "46": {
+      "op": "assert // is not creating",
+      "stack_out": []
+    },
+    "47": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "50": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "53": {
+      "callsub": "smart_contracts.devrel_assessment.contract.DevrelAssessment.hello",
+      "op": "callsub hello",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "56": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ]
+    },
+    "57": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length%0#0"
+      ]
+    },
+    "58": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "59": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "62": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ]
+    },
+    "63": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0"
+      ]
+    },
+    "64": {
+      "op": "pushbytes 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "70": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ]
+    },
+    "71": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "72": {
+      "op": "log",
+      "stack_out": []
+    },
+    "73": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "74": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "75": {
+      "block": "__puya_arc4_router___box_put_route@3",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "77": {
+      "op": "!",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "78": {
+      "op": "assert // OnCompletion is NoOp",
+      "stack_out": []
+    },
+    "79": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "81": {
+      "op": "assert // is not creating",
+      "stack_out": []
+    },
+    "82": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "85": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "88": {
+      "callsub": "smart_contracts.devrel_assessment.contract.DevrelAssessment.box_put",
+      "op": "callsub box_put",
+      "stack_out": []
+    },
+    "91": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "92": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "93": {
+      "block": "__puya_arc4_router___bare_routing@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "95": {
+      "op": "bnz __puya_arc4_router___after_if_else@10",
+      "stack_out": []
+    },
+    "98": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "100": {
+      "op": "!",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0"
+      ]
+    },
+    "101": {
+      "op": "assert // is creating",
+      "stack_out": []
+    },
+    "102": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "103": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "104": {
+      "block": "__puya_arc4_router___after_if_else@10",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "105": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "106": {
+      "subroutine": "smart_contracts.devrel_assessment.contract.DevrelAssessment.hello",
+      "params": {
+        "name#0": "bytes"
+      },
+      "block": "hello",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "109": {
+      "op": "pushbytes \"Hello, \"",
+      "defined_out": [
+        "\"Hello, \""
+      ],
+      "stack_out": [
+        "\"Hello, \""
+      ]
+    },
+    "118": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"Hello, \"",
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "\"Hello, \"",
+        "name#0 (copy)"
+      ]
+    },
+    "120": {
+      "op": "concat",
+      "defined_out": [
+        "greetings#0"
+      ],
+      "stack_out": [
+        "greetings#0"
+      ]
+    },
+    "121": {
+      "op": "dup",
+      "defined_out": [
+        "greetings#0",
+        "greetings#0 (copy)"
+      ],
+      "stack_out": [
+        "greetings#0",
+        "greetings#0 (copy)"
+      ]
+    },
+    "122": {
+      "callsub": "smart_contracts.devrel_assessment.contract.DevrelAssessment.box_put",
+      "op": "callsub box_put",
+      "stack_out": [
+        "greetings#0"
+      ]
+    },
+    "125": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "126": {
+      "subroutine": "smart_contracts.devrel_assessment.contract.DevrelAssessment.box_put",
+      "params": {
+        "response#0": "bytes"
+      },
+      "block": "box_put",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "129": {
+      "op": "pushbytes 0x42",
+      "defined_out": [
+        "0x42"
+      ],
+      "stack_out": [
+        "0x42"
+      ]
+    },
+    "132": {
+      "op": "box_del",
+      "defined_out": [
+        "{box_del}"
+      ],
+      "stack_out": [
+        "{box_del}"
+      ]
+    },
+    "133": {
+      "op": "pop",
+      "stack_out": []
+    },
+    "134": {
+      "op": "pushbytes 0x42",
+      "stack_out": [
+        "0x42"
+      ]
+    },
+    "137": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "0x42",
+        "response#0 (copy)"
+      ],
+      "stack_out": [
+        "0x42",
+        "response#0 (copy)"
+      ]
+    },
+    "139": {
+      "op": "box_put",
+      "stack_out": []
+    },
+    "140": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}
